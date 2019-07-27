@@ -1,39 +1,25 @@
 {
   "heroes": [
     {
-      "id": "D246031C-F844-AC41-7C02-9D553FC59082",
-      "firstName": "Emerald",
-      "lastName": "Morrow",
-      "house": "Suriname",
-      "knownAs": "Lorem Lorem Luctus Industries"
-    },
-    {
       "id": "837BF771-0192-3FDA-F078-E6E8A06795DB",
       "firstName": "Madeson",
       "lastName": "Patton",
       "house": "Panama",
-      "knownAs": "Mi Pede PC"
-    },
-    {
-      "id": "A7F2D9FC-86D6-1D87-CB73-C7C3C8EC908F",
-      "firstName": "Henry",
-      "lastName": "Harrison",
-      "house": "Niger",
-      "knownAs": "Mollis Vitae Industries"
+      "knownAs": "Mi Pede PC Ltd."
     },
     {
       "id": "AFBD6796-83BD-2724-C0FA-7F8D0F0766C1",
       "firstName": "Hammett",
       "lastName": "Mills",
       "house": "Bonaire, Sint Eustatius and Saba",
-      "knownAs": "Odio Nam Associates"
+      "knownAs": "Odio Nam Associates Ltd."
     },
     {
       "id": "6AECB1FF-4581-1A41-4CC6-FA7B4B13AEF0",
       "firstName": "Kamal",
       "lastName": "Kennedy",
       "house": "Northern Mariana Islands",
-      "knownAs": "Luctus Vulputate Nisi Corp."
+      "knownAs": "Luctus Vulputate Nisi Co."
     },
     {
       "id": "2DCD45A5-C0E6-C93C-4CEC-D3788EE5E0BA",

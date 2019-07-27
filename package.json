@@ -22,6 +22,7 @@
     "@angular/router": "~8.1.2",
     "@datorama/akita": "^4.8.1",
     "@datorama/akita-ngdevtools": "^3.0.2",
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "bootstrap": "^4.3.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",

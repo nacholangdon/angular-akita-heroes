@@ -1,4 +1,4 @@
-import { ID, guid, EntityState } from '@datorama/akita';
+import { ID, EntityState } from '@datorama/akita';
 
 export type HeroModel = {
   id: ID;

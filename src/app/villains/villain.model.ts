@@ -1,4 +1,4 @@
-import { ID, guid } from '@datorama/akita';
+import { EntityState, ID } from '@datorama/akita';
 
 export type VillainModel = {
   id: ID;
@@ -7,3 +7,5 @@ export type VillainModel = {
   house: string;
   knownAs: string;
 };
+
+export interface VillainsState extends EntityState<VillainModel> {}

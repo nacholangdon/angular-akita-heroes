@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 export interface VillainsState extends EntityState<VillainModel> {}
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 @StoreConfig({ name: 'heroes' })
 export class VillainsStore extends EntityStore<VillainsState, VillainModel> {
   constructor() {

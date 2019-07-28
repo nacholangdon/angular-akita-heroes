@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { HeroModel } from './hero.model';
 import { throwError } from 'rxjs';
 import { BaseUrl } from '../shared/api.config';
-import { HeroStore } from './hero-store.service';
+import { HeroStore } from './hero-store';
 import { catchError } from 'rxjs/operators';
 import { ID } from '@datorama/akita';
 
@@ -19,7 +19,7 @@ export class HeroService {
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
-          return throwError(new Error(error.message));
+          return throwError(error.message);
         })
       )
       .subscribe(data => this.heroStore.set(data));
@@ -31,7 +31,7 @@ export class HeroService {
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
-          return throwError(new Error(error.message));
+          return throwError(error.message);
         })
       )
       .subscribe(data => this.heroStore.add(data));
@@ -43,7 +43,7 @@ export class HeroService {
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
-          return throwError(new Error(error.message));
+          return throwError(error.message);
         })
       )
       .subscribe(data => this.heroStore.add(data));
@@ -55,7 +55,7 @@ export class HeroService {
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
-          return throwError(new Error(error.message));
+          return throwError(error.message);
         })
       )
       .subscribe(data => this.heroStore.update(hero.id, { ...data }));
@@ -67,7 +67,7 @@ export class HeroService {
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
-          return throwError(new Error(error.message));
+          return throwError(error.message);
         })
       )
       .subscribe(() => this.heroStore.remove(id));

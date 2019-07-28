@@ -29,7 +29,7 @@ export class EditHeroComponent implements OnInit {
     this.getHero();
     this.formBuilderInit();
     this.hero = this.heroesQuery.getEntity(this.id);
-    this.patchHero();
+    this.patchForm();
   }
 
   onSubmit() {
@@ -47,7 +47,7 @@ export class EditHeroComponent implements OnInit {
     this.heroService.getHero(this.id);
   }
 
-  private patchHero(): void {
+  private patchForm(): void {
     this.heroForm.patchValue(this.hero);
   }
 

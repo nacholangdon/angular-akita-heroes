@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HeroModel } from '../hero.model';
 import { HeroesQuery } from '../heroes.query';
-import { HeroService } from '../hero.service';
+import { HeroesService } from '../heroes.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -18,7 +18,7 @@ export class HeroesComponent implements OnInit {
 
   constructor(
     private heroesQuery: HeroesQuery,
-    private heroService: HeroService,
+    private heroService: HeroesService,
     private fb: FormBuilder
   ) {}
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { VillainsQuery } from '../villains.query';
-import { VillainService } from '../villain.service';
+import { VillainsService } from '../villains.service';
 import { Observable } from 'rxjs';
 import { VillainModel } from '../villain.model';
 
@@ -18,7 +18,7 @@ export class VillainsComponent implements OnInit {
 
   constructor(
     private villainsQuery: VillainsQuery,
-    private villainService: VillainService,
+    private villainService: VillainsService,
     private fb: FormBuilder
   ) {}
 

@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { HeroModel } from '../hero.model';
 import { ActivatedRoute } from '@angular/router';
 import { HeroesQuery } from '../heroes.query';
-import { HeroService } from '../hero.service';
+import { HeroesService } from '../heroes.service';
 
 @Component({
   selector: 'app-edit-hero',
@@ -19,7 +19,7 @@ export class EditHeroComponent implements OnInit {
 
   constructor(
     private heroesQuery: HeroesQuery,
-    private heroService: HeroService,
+    private heroService: HeroesService,
     private fb: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private location: Location

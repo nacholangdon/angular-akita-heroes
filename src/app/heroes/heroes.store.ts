@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 @StoreConfig({ name: 'heroes' })
-export class HeroStore extends EntityStore<HeroesState, HeroModel> {
+export class HeroesStore extends EntityStore<HeroesState, HeroModel> {
   constructor() {
     super();
   }

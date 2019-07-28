@@ -4,7 +4,7 @@ import { VillainModel } from '../villain.model';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { VillainsQuery } from '../villains.query';
-import { VillainService } from '../villain.service';
+import { VillainsService } from '../villains.service';
 
 @Component({
   selector: 'app-edit-villain',
@@ -19,7 +19,7 @@ export class EditVillainComponent implements OnInit {
 
   constructor(
     private villainsQuery: VillainsQuery,
-    private villainService: VillainService,
+    private villainService: VillainsService,
     private fb: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private location: Location

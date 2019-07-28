@@ -1,75 +1,79 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { HeroModel } from './hero.model';
+import { VillainModel } from './villain.model';
 import { throwError } from 'rxjs';
 import { BaseUrl } from '../shared/api.config';
-import { HeroStore } from './hero-store';
 import { catchError } from 'rxjs/operators';
+import { VillainsStore } from './villains.store';
 import { ID } from '@datorama/akita';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HeroService {
-  constructor(private http: HttpClient, private heroStore: HeroStore) {}
+export class VillainsService {
+  constructor(private http: HttpClient, private villainStore: VillainsStore) {}
 
-  getHeroes(): void {
+  getVillains(): void {
     this.http
-      .get<HeroModel[]>(`${BaseUrl.hero}`)
+      .get<VillainModel[]>(`${BaseUrl.villain}`)
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
           return throwError(error.message);
         })
       )
-      .subscribe(data => this.heroStore.set(data));
+      .subscribe(data => this.villainStore.set(data));
   }
 
-  getHero(id: string): void {
+  getVillain(id: string): void {
     this.http
-      .get<HeroModel>(`${BaseUrl.hero}${id}`)
+      .get<VillainModel>(`${BaseUrl.villain}${id}`)
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
           return throwError(error.message);
         })
       )
-      .subscribe(data => this.heroStore.add(data));
+      .subscribe(data => this.villainStore.add(data));
   }
 
-  addHero(hero: HeroModel): void {
+  addVillain(villain: VillainModel): void {
     this.http
-      .post<HeroModel>(`${BaseUrl.hero}`, hero)
+      .post<VillainModel>(`${BaseUrl.villain}`, villain)
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
           return throwError(error.message);
         })
       )
-      .subscribe(data => this.heroStore.add(data));
+      .subscribe(data => this.villainStore.add(data));
   }
 
-  updateHero(hero: HeroModel): void {
+  updateVillain(villain: VillainModel): void {
     this.http
-      .put<HeroModel>(`${BaseUrl.hero}${hero.id}`, hero)
+      .put<VillainModel>(`${BaseUrl.villain}${villain.id}`, villain)
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
           return throwError(error.message);
         })
       )
-      .subscribe(data => this.heroStore.update(hero.id, { ...data }));
+      .subscribe(data =>
+        this.villainStore.update(villain.id, {
+          ...data
+        })
+      );
   }
 
-  removeHero(id: ID): void {
+  removeVillain(id: ID): void {
     this.http
-      .delete<any>(`${BaseUrl.hero}${id}`)
+      .delete<VillainModel>(`${BaseUrl.villain}${id}`)
       .pipe(
         catchError((error: HttpErrorResponse) => {
           alert(error.message);
           return throwError(error.message);
         })
       )
-      .subscribe(() => this.heroStore.remove(id));
+      .subscribe(() => this.villainStore.remove(id));
   }
 }

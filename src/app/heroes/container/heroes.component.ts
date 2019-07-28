@@ -33,6 +33,7 @@ export class HeroesComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.heroService.addHero(this.newItemForm.value);
     this.newItemForm.reset();
     this.isShowNewItemForm = !this.isShowNewItemForm;
   }

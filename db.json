@@ -1,13 +1,6 @@
 {
   "heroes": [
     {
-      "id": "837BF771-0192-3FDA-F078-E6E8A06795DB",
-      "firstName": "Madeson",
-      "lastName": "Patton",
-      "house": "Panama",
-      "knownAs": "Mi Pede PC Ltd."
-    },
-    {
       "id": "AFBD6796-83BD-2724-C0FA-7F8D0F0766C1",
       "firstName": "Hammett",
       "lastName": "Mills",

@@ -11,7 +11,10 @@ import { ID } from '@datorama/akita';
   providedIn: 'root'
 })
 export class HeroesService {
-  constructor(private http: HttpClient, private heroStore: HeroesStore) {}
+
+  constructor(
+    private http: HttpClient,
+    private heroStore: HeroesStore) {}
 
   getHeroes(): void {
     this.http
